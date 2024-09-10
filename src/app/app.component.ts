@@ -10,6 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Danny_Le_Learning_Angular';
-
-  
+  p:string = "What?"
+  footer:string = "Testing 123, testing 123 over."
 }
