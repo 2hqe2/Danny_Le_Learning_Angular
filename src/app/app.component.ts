@@ -9,7 +9,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Danny_Le_Learning_Angular';
-  p:string = "What?"
-  footer:string = "Testing 123, testing 123 over."
+  title = 'Danny Le Learning Angular';
+  word = 'Testing';
+  word2 = '123 copy, 123 over.';
 }
