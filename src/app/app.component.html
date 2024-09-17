@@ -1,27 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
-  <header>
-    <h1>{{ word }}</h1>
-  </header>
-  <main>
-    <p>
-      Turns out, I have not been reading the directions properly & spent most of my time on index.html.<br>
-      It was <b>NOT</b> fun ;-;
-    </p>
-  </main>
-  <footer>
-    <h1>{{ word2 }}</h1>
-    <p>
-      Luckily, I was persistent to fix my supposed interpolition malfunction before the deadline creeps ins.
-      I wanted to use 1 other variable type but I sadly did not know how or what the others are.
-      Still getting used to commiting these. Kind of have to use this terminal to prep staging & git bash to push.
-      Overall, a rough but fresh start. 
-    </p>
-  </footer>
-</body>
+<!--
+Danny Le
+2024-09-18
+-->
 
+<html>
+  <head>
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <h1><b><q>RANDOM GEMSTONES</q></b> (yay!!1!)</h1>  
+    <div>
+      <table align="center" width="100%">
+          <tr> Name/Material
+            <td *ngFor="let gem of gems">{{ gem.material }}</td>
+          </tr>
+          <tr> Price:
+            <td *ngFor="let gem of gems">${{ gem.price }}</td>
+          </tr>
+          <tr> Maker:
+            <td *ngFor="let gem of gems">{{ gem.productionCompany }}</td>
+          </tr>
+          <tr> Shiny?
+            <td *ngFor="let gem of gems">{{ gem.shiny }}</td>
+          </tr>
+          <tr> Rarity?
+            <td *ngFor="let gem of gems">{{ gem.rarity }}</td>
+          </tr>
+          <tr> Id:
+            <td *ngFor="let gem of gems">{{ gem.id }}</td>
+          </tr>
+      </table>
+    </div>    
+  </body>
 </html>
