@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Gem } from './gem';
 
 @Component({
   selector: 'app-root',
@@ -13,3 +14,7 @@ export class AppComponent {
   word = 'Testing';
   word2 = '123 copy, 123 over.';
 }
+
+
+
+
