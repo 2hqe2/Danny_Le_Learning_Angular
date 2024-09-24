@@ -1,1 +1,14 @@
-<p>gem-list-item works!</p>
+
+<div *ngIf="gem" class="app-gem-list-item">
+    <h2> Gem </h2>
+    <p> <strong> ID: </strong> {{ gem.id }} </p>
+    <p> <strong> Material: </strong> {{ gem.material}} </p>
+    <p> <strong> Price: </strong> {{ gem.price }} </p>
+    <p> <strong> Creator: </strong> {{ gem.productionCompany }} </p>
+    <p> <strong> Shiny?: </strong> {{ gem.shiny ? 'true': 'false' }} </p>
+    <p> <strong> Shiny?: </strong> {{ gem.rarity ? 'rare': 'uncommon' }} </p>
+</div>
+
+<div>
+    <h2>test</h2>
+</div>
