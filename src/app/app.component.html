@@ -9,31 +9,7 @@ Danny Le
     <title>{{ title }}</title>
   </head>
   <body>
-    <h1><b><q>RANDOM GEMSTONES</q></b> (yay!!1!)</h1>  
+    <h1>{{ title }}</h1>
     <app-gem-list></app-gem-list>
-    <!--
-    <div>
-      <table align="center" width="100%">
-          <tr> Name/Material
-            <td *ngFor="let gem of gems">{{ gem.material }}</td>
-          </tr>
-          <tr> Price:
-            <td *ngFor="let gem of gems">${{ gem.price }}</td>
-          </tr>
-          <tr> Maker:
-            <td *ngFor="let gem of gems">{{ gem.productionCompany }}</td>
-          </tr>
-          <tr> Shiny?
-            <td *ngFor="let gem of gems">{{ gem.shiny }}</td>
-          </tr>
-          <tr> Rarity?
-            <td *ngFor="let gem of gems">{{ gem.rarity }}</td>
-          </tr>
-          <tr> Id:
-            <td *ngFor="let gem of gems">{{ gem.id }}</td>
-          </tr>
-      </table>
-    </div>    
-    -->
   </body>
 </html>

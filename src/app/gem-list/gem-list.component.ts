@@ -3,6 +3,7 @@ import { Gem } from '../gem';
 import { NgFor } from '@angular/common';
 import { NgIf } from '@angular/common';
 import { GemListItemComponent } from '../gem-list-item/gem-list-item.component'; 
+import { GemService } from '../Services/gem.service';
 
 @Component({
   selector: 'app-gem-list',
@@ -12,11 +13,23 @@ import { GemListItemComponent } from '../gem-list-item/gem-list-item.component';
   styleUrl: './gem-list.component.css'
 })
 export class GemListComponent {
-  opal : Gem = {id: 7, material: "Opal", price: 75.99, productionCompany: "Rock Bottom", rarity : "rare"};
-  garnet : Gem = {id: 8, material: "Garnet", price: 65.00, productionCompany: "Rock Bottom", rarity : "uncommon"};
-  beryl :  Gem = {id: 7, material: "Opal", price: 75.99, productionCompany: "Rock Bottom", rarity : "rare"};
-  aquamarine : Gem = {id: 7, material: "Opal", price: 75.99, productionCompany: "Rock Bottom", rarity : "rare"};
-  gems2 = [this.opal, this.garnet, this.beryl, this.aquamarine];
+  displayedColumns: string[] = ['id', 'material', 'price', 'productionCompany', 'shiny', 'rarity'];
+  gemList: Gem[] = [];
+  constructor(private gemService: GemService){
+  }
 
+  ngOnInit() {
+    //This lifecycle hook is a good place to fetch and init our data
+    this.gemService.getGems().subscribe({
+      next: (data: Gem[]) => this.gemList = data,
+      error: err => console.error("Error fetching Gems", err),
+      complete: () => console.log("Student data fetch complete!")
+    })
+  }
 
+  selectedGem?: Gem;
+
+  selectGem(gem: Gem): void {
+    this.selectedGem = gem;
+  }
 }

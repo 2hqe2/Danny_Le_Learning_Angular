@@ -3,6 +3,7 @@ import { Gem } from '../gem';
 import { NgFor } from '@angular/common';
 import { NgIf } from '@angular/common';
 
+
 @Component({
   selector: 'app-gem-list-item',
   standalone: true,

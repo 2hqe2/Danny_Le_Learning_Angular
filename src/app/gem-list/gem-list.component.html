@@ -1,5 +1,26 @@
-
-<app-gem-list-item>
-<app-gem-list-item>
-<app-gem-list-item>
-<app-gem-list-item>
+<div class="container">
+    <h2>Gem List</h2>
+    <table>
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Material</th>
+    <th>Price</th>
+    <th>Creator</th>
+    <th>Shiny</th>
+    <th>Rarity</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let gem of gemList" (click)="selectGem(gem)">
+    <td>{{ gem.id }}</td>
+    <td>{{ gem.material }}</td>
+    <td>{{ gem.price }}</td>
+    <td>{{ gem.productionCompany }}</td>
+    <td>{{ gem.shiny ? 'Yes' : 'No' }}</td>
+    <td>{{ gem.rarity ? 'rare' : 'uncommon' }}</td>
+    </tr>
+    </tbody>
+    </table>
+    <app-gem-list-item [gem]="selectedGem"></app-gem-list-item>
+   </div>
