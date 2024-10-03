@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Gem } from './gem';
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { GemListComponent } from "./gem-list/gem-list.component";
-import { GemService } from './Services/gem.service';
 
 @Component({
   selector: 'app-root',

@@ -4,5 +4,5 @@ export interface Gem {
     price : number;
     productionCompany : string;
     shiny? : boolean;
-    rarity? : string;
+    rarity? : boolean;
 }

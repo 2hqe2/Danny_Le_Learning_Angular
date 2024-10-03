@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { Gem } from '../gem';
-import { NgFor } from '@angular/common';
-import { NgIf } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { GemListItemComponent } from '../gem-list-item/gem-list-item.component'; 
 import { GemService } from '../Services/gem.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-gem-list',
   standalone: true,
-  imports: [NgFor, NgIf, GemListItemComponent],
+  imports: [NgFor, NgIf, GemListItemComponent, RouterLink],
   templateUrl: './gem-list.component.html',
   styleUrl: './gem-list.component.css'
 })

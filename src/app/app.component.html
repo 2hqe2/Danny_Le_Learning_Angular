@@ -9,7 +9,16 @@ Danny Le
     <title>{{ title }}</title>
   </head>
   <body>
+    <!-- Future Nav bar-->
+    <div class="nav-bar">
+      <nav>
+        <a routerLink="/gems" routerLinkActive="active">Gem List</a>
+        <a routerLink="/modify-gem" routerLinkActive="active">Modify Gem</a>
+      </nav>
+    </div>
+
+
     <h1>{{ title }}</h1>
-    <app-gem-list></app-gem-list>
+    <router-outlet></router-outlet>
   </body>
 </html>
