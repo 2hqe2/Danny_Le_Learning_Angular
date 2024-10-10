@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Gem } from '../gem';
-import { NgIf } from '@angular/common';
+import { NgIf, NgOptimizedImage } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GemService } from '../Services/gem.service';
 
@@ -8,7 +8,7 @@ import { GemService } from '../Services/gem.service';
 @Component({
   selector: 'app-gem-list-item',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, NgOptimizedImage],
   templateUrl: './gem-list-item.component.html',
   styleUrl: './gem-list-item.component.css'
 })

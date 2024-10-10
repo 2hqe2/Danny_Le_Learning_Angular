@@ -7,8 +7,9 @@
     <p> <strong> Creator: </strong> {{ gem.productionCompany }} </p>
     <p> <strong> Shiny?: </strong> {{ gem.shiny ? 'true': 'false' }} </p>
     <p> <strong> Shiny?: </strong> {{ gem.rarity ? 'rare': 'uncommon' }} </p>
+    <!--<p> <strong> Image: </strong> <img ngSrc={{ gem.img }} alt=""> </p> An attempt to make the desc. img-->  
     <button (click)="goBackward()" [disabled]="index === 0">Previous</button>
     <button (click)="goForward()" [disabled]="index === gemList.length - 1">Next</button>
-    <button (click)="goBack()">Back to Student List</button>
+    <button (click)="goBack()">Back to Gem List</button>
 
 </div>

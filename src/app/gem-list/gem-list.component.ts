@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Gem } from '../gem';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { GemListItemComponent } from '../gem-list-item/gem-list-item.component'; 
 import { GemService } from '../Services/gem.service';
 import { RouterLink } from '@angular/router';
@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-gem-list',
   standalone: true,
-  imports: [NgFor, NgIf, GemListItemComponent, RouterLink],
+  imports: [NgFor, NgIf, GemListItemComponent, RouterLink, NgOptimizedImage],
   templateUrl: './gem-list.component.html',
   styleUrl: './gem-list.component.css'
 })
