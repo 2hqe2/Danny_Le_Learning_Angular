@@ -38,7 +38,7 @@ export class GemListItemComponent implements OnInit {
     });
   }
 
-  //function to go back to student-list view
+  //function to go back to gem-list view
   goBack(): void {
     this.router.navigate(['/gems']);
   }
